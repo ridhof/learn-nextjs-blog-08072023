@@ -5,6 +5,9 @@ import utilStyles from '../../styles/utils.module.css';
 
 import Head from 'next/head';
 
+// do not fetch API route inside getStaticProps or getStaticPaths
+// but write the logic directly inside getStaticProps or getStaticPaths
+
 export async function getStaticProps({ params }) {
     const postData = await getPostData(params.id);
     return {
